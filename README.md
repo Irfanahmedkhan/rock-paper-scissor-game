@@ -1,7 +1,5 @@
 # rock-paper-scissor-game
 
-My second javascrip coding at beginner level . 
+My second javaScrip coding at beginner level . 
 
-still i am workingon the last function and i am stuck on it :( 
-
-i dont know how to stop prgram or reset program after 1 click .. 
+still i am working on the last function, how to stop program or reset program after 1 click .. 
