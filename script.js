@@ -2,35 +2,42 @@ var img1 = document.getElementById("rockimg");
 var img2 = document.getElementById("paperimg");
 var img3 = document.getElementById("scissorimg");
 
+var turnover = false;
+
+
 function computerchoice() {
-  var myimages = ["rock.jpg", "paper.jpg", "scissor.jpg"];
-  var ry = Math.floor(Math.random() * myimages.length);
 
-  computer = document.createElement("img");
-  computer.setAttribute("class", "resultimg");
+  if (turnover === false) {
+    var myimages = ["rock.jpg", "paper.jpg", "scissor.jpg"];
+    var ry = Math.floor(Math.random() * myimages.length);
 
-  computer.src = myimages[ry];
-  if (myimages[ry] == "rock.jpg") {
-    computer.setAttribute("id", "rockimg");
-  } else if (myimages[ry] == "paper.jpg") {
-    computer.setAttribute("id", "paperimg");
-  } else if (myimages[ry] == "scissor.jpg") {
-    computer.setAttribute("id", "scissorimg");
+    computer = document.createElement("img");
+    computer.setAttribute("class", "resultimg");
+    computer.src = myimages[ry];
+
+    if (myimages[ry] == "rock.jpg") {
+      computer.setAttribute("id", "rockimg");
+    } else if (myimages[ry] == "paper.jpg") {
+      computer.setAttribute("id", "paperimg");
+    } else if (myimages[ry] == "scissor.jpg") {
+      computer.setAttribute("id", "scissorimg");
+    }
+
+    result.appendChild(computer);
   }
-
-  result.appendChild(computer);
-
 }
 
 function userselect(userselection, userid) {
+  if (turnover===false){
   user = document.createElement("img");
   user.setAttribute("class", "resultimg");
   user.setAttribute("id", userid);
   user.src = userselection;
   result.appendChild(user);
 
-  playagain()
+  }
 
+playagain()
 
 }
 
@@ -45,6 +52,7 @@ function lose() {
   lose.appendChild(document.createTextNode("You Lose!"));
   result.appendChild(lose);
 }
+
 function draw() {
   var draw = document.createElement("h2");
   draw.appendChild(document.createTextNode("Draw!"));
@@ -52,25 +60,30 @@ function draw() {
 }
 
 function finalresult() {
-  if (user.id === "paperimg" && computer.id === "rockimg") {
-    win();
-  } else if (user.id === "paperimg" && computer.id === "paperimg") {
-    draw();
-  } else if (user.id === "paperimg" && computer.id === "scissorimg") {
-    lose();
-  } else if (user.id === "rockimg" && computer.id === "rockimg") {
-    draw();
-  } else if (user.id === "rockimg" && computer.id === "paperimg") {
-    lose();
-  } else if (user.id === "rockimg" && computer.id === "scissorimg") {
-    win();
-  } else if (user.id === "scissorimg" && computer.id === "scissorimg") {
-    draw();
-  } else if (user.id === "scissorimg" && computer.id === "rockimg") {
-    lose();
-  } else if (user.id === "scissorimg" && computer.id === "paperimg") {
-    win();
+  if (turnover === false) {
+
+    if (user.id === "paperimg" && computer.id === "rockimg") {
+      win();
+    } else if (user.id === "paperimg" && computer.id === "paperimg") {
+      draw();
+    } else if (user.id === "paperimg" && computer.id === "scissorimg") {
+      lose();
+    } else if (user.id === "rockimg" && computer.id === "rockimg") {
+      draw();
+    } else if (user.id === "rockimg" && computer.id === "paperimg") {
+      lose();
+    } else if (user.id === "rockimg" && computer.id === "scissorimg") {
+      win();
+    } else if (user.id === "scissorimg" && computer.id === "scissorimg") {
+      draw();
+    } else if (user.id === "scissorimg" && computer.id === "rockimg") {
+      lose();
+    } else if (user.id === "scissorimg" && computer.id === "paperimg") {
+      win();
+    }
   }
+  turnover = true;
+
 }
 
 img1.addEventListener("click", function () {
@@ -92,9 +105,19 @@ img3.addEventListener("click", function () {
 });
 
 
+
+
+
 function playagain() {
-  var playagain = document.createElement('h3')
-  playagain.setAttribute('id','playagain')
+  var playagain = document.createElement('button')
+  playagain.setAttribute('id','playag')
   playagain.appendChild(document.createTextNode('Play Again'))
   container.appendChild(playagain)
+
+
 }
+
+document.getElementById(playag).addEventListener('click', function(){
+console.log('asdfadsf');
+
+} )
