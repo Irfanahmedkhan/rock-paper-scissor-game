@@ -5,13 +5,28 @@ html, body {
 
 #container {
   height: 550px;
-  width: 35%;
+  width: 100%;
   box-shadow: 0px 0px 10px 5px rgb(128, 128, 128);
-  border: 2px solid black;
+  border: 2px solid blue;
   border-radius: 20px;
   background: linear-gradient(135deg, #8989ba 0%,#8989ba 100%); 
+  position: relative;
 
   }
+
+  #container h3 {
+  margin: 0px;
+  padding: 10px; 
+text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  font-size: 30px;
+  color: red;
+  background-color: white ;
+  border-radius: 10px;
+
+}
  
 #border {
   height: 20%;
@@ -42,7 +57,7 @@ html, body {
 
 #h2 {
   padding: 30px;
-  font-size: 40px;
+  font-size: 80% auto;
   color: #fff;
   text-shadow: 0 5px 5px rgb(97, 91, 91),  0 0 35px #919ca7;
   text-align: center;

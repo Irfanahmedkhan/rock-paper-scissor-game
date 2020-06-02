@@ -19,6 +19,7 @@ function computerchoice() {
   }
 
   result.appendChild(computer);
+
 }
 
 function userselect(userselection, userid) {
@@ -27,6 +28,10 @@ function userselect(userselection, userid) {
   user.setAttribute("id", userid);
   user.src = userselection;
   result.appendChild(user);
+
+  playagain()
+
+
 }
 
 function win() {
@@ -85,3 +90,11 @@ img3.addEventListener("click", function () {
   computerchoice();
   finalresult();
 });
+
+
+function playagain() {
+  var playagain = document.createElement('h3')
+  playagain.setAttribute('id','playagain')
+  playagain.appendChild(document.createTextNode('Play Again'))
+  container.appendChild(playagain)
+}
