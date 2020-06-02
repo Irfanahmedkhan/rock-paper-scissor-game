@@ -28,7 +28,7 @@ jobs:
     - name: install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ rock-paper-scissor-by-githup.surge.sh --token ${{Secrets.SURGE_TOKEN}}
+      run: surge ./ rockpaper-scissor-by-githup.surge.sh --token ${{Secrets.SURGE_TOKEN}}
       
        
 
