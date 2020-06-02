@@ -25,7 +25,7 @@ jobs:
     - uses: actions/checkout@v2
     - uses: actions/setup-node@v2-beta
       with:
-        node-version: '12'
+        node-version: 12
     - name: install Surge
       run: npm install -g surge
     - name: Run Surge
