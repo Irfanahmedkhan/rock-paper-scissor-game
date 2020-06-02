@@ -7,7 +7,7 @@ html, body {
   height: 550px;
   width: 35%;
   box-shadow: 0px 0px 10px 5px rgb(128, 128, 128);
-  border: 1px solid red;
+  border: 2px solid black;
   border-radius: 20px;
   background: linear-gradient(135deg, #8989ba 0%,#8989ba 100%); 
 
