@@ -28,7 +28,7 @@ jobs:
     - name: Install Surge
       run: npm install -g surge
     - name: Run Surge
-      run: surge ./ rock-paper-game.surge.sh --token ${{secrets.SURGE_TOKEN}}
+      run: surge ./ rocks-paper-game.surge.sh --token ${{secrets.SURGE_TOKEN}}
       
        
 
